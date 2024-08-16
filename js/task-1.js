@@ -1,12 +1,12 @@
 function slugify(title) {
-  // Приводимо рядок до нижнього регістру і замінюємо пробіли на тире
+  // Lower the string and replace spaces with dashes
   return title
-    .toLowerCase()         // Перетворює рядок до нижнього регістру
-    .replace(/\s+/g, '-')  // Замінює один або більше пробілів на тире
-    .replace(/[^\w-]/g, ''); // Видаляє всі небуквені символи, крім тире
+    .toLowerCase()         // Converts a string to lower case
+    .replace(/\s+/g, '-')  // Replaces one or more spaces with dashes
+    .replace(/[^\w-]/g, ''); // Removes all non-alphanumeric characters except dashes
 }
 
-// Перевірка функції
+// Function check
 console.log(slugify("Arrays for begginers")); // "arrays-for-begginers"
 console.log(slugify("English for developer")); // "english-for-developer"
 console.log(slugify("Ten secrets of JavaScript")); // "ten-secrets-of-javascript"
